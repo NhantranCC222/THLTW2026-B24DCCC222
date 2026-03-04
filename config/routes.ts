@@ -44,7 +44,7 @@
 	},
 	{
 		path:'/bt2',
-		name:'Quản lý sản phẩm',
+		name:'BT2-27/1/2026',
 		component: '@/pages/BT2',
 		icon:'shopping-cart',
 	},
