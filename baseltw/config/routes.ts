@@ -43,33 +43,39 @@
 		component: './TodoList',
 	},
 	{
-  path: '/bai-2',
-  name: 'Bài 2',
-  icon: 'BookOutlined',
-  routes: [
-    {
-      path: '/bai-2/subjects',
-      name: 'Quản lý môn học',
-      component: './bai2/Subjects',
-    },
-    {
-      path: '/bai-2/logs',
-      name: 'Quản lý lịch học',
-      component: './bai2/Logs',
-    },
-    {
-      path: '/bai-2/goals',
-      name: 'Mục tiêu học tập',
-      component: './bai2/Goals',
-    },
-  ],
+	path: '/bai1',
+	name: 'Bai1',
+	icon: 'SmileOutlined',
+	component: './bai1',
 },
-    {
-  path: '/bai-1',
-  name: 'Bài 1 - Đoán số',
-  icon: 'NumberOutlined',
-  component: './bai1/GuessNumber',
+{
+	path: '/bai2',
+	name: 'Bai2',
+	icon: 'BookOutlined',
+	routes: [
+		{
+			path: '/bai2/khoi-kien-thuc',
+			name: 'KhoiKienThuc',
+			component: './bai2/KhoiKienThuc',
+		},
+		{
+			path: '/bai2/mon-hoc',
+			name: 'MonHoc',
+			component: './bai2/MonHoc',
+		},
+		{
+			path: '/bai2/cau-hoi',
+			name: 'CauHoi',
+			component: './bai2/CauHoi',
+		},
+		{
+			path: '/bai2/de-thi',
+			name: 'DeThi',
+			component: './bai2/DeThi',
+		},
+	],
 },
+    
 
 	// DANH MUC HE THONG
 	// {
