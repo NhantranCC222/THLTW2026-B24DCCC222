@@ -43,39 +43,12 @@
 		component: './TodoList',
 	},
 	{
-	path: '/bai1',
-	name: 'Bai1',
-	icon: 'SmileOutlined',
-	component: './bai1',
+  path: '/th03',
+  name: 'TH03',
+  icon: 'CalendarOutlined',
+  component: './TH03',
 },
-{
-	path: '/bai2',
-	name: 'Bai2',
-	icon: 'BookOutlined',
-	routes: [
-		{
-			path: '/bai2/khoi-kien-thuc',
-			name: 'KhoiKienThuc',
-			component: './bai2/KhoiKienThuc',
-		},
-		{
-			path: '/bai2/mon-hoc',
-			name: 'MonHoc',
-			component: './bai2/MonHoc',
-		},
-		{
-			path: '/bai2/cau-hoi',
-			name: 'CauHoi',
-			component: './bai2/CauHoi',
-		},
-		{
-			path: '/bai2/de-thi',
-			name: 'DeThi',
-			component: './bai2/DeThi',
-		},
-	],
-},
-    
+	
 
 	// DANH MUC HE THONG
 	// {
