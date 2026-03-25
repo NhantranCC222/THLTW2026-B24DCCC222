@@ -42,6 +42,12 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+  path: '/th04',
+  name: 'TH04',
+  icon: 'AppstoreOutlined',
+  component: './TH04',
+},
 
 	// DANH MUC HE THONG
 	// {
