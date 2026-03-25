@@ -42,13 +42,6 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
-	{
-  path: '/th03',
-  name: 'TH03',
-  icon: 'CalendarOutlined',
-  component: './TH03',
-},
-	
 
 	// DANH MUC HE THONG
 	// {
