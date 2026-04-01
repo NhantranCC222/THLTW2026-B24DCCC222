@@ -43,12 +43,27 @@
 		component: './TodoList',
 	},
 	{
-  path: '/th04',
-  name: 'TH04',
+  path: '/th05',
+  name: 'TH05',
   icon: 'AppstoreOutlined',
-  component: './TH04',
+  routes: [
+    {
+      path: '/th05/dashboard',
+      name: 'Dashboard',
+      component: '@/pages/TH05/Dashboard',
+    },
+    {
+      path: '/th05/club',
+      name: 'Quản lý CLB',
+      component: '@/pages/TH05/Club',
+    },
+    {
+      path: '/th05/application',
+      name: 'Đơn đăng ký',
+      component: '@/pages/TH05/Application',
+    },
+  ],
 },
-
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
