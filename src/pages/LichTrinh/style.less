@@ -1,0 +1,370 @@
+@import '~antd/es/style/themes/default.less';
+
+// ============ Itinerary Page Layout ============
+.lichTrinh-container {
+	.lichTrinh-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 24px;
+		flex-wrap: wrap;
+		gap: 12px;
+
+		h2 {
+			font-size: 28px;
+			font-weight: 800;
+			color: #1a1a2e;
+			margin: 0;
+
+			@media (max-width: @screen-sm) {
+				font-size: 22px;
+			}
+		}
+	}
+}
+
+// ============ Itinerary List ============
+.itin-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.itin-card {
+	border-radius: 16px !important;
+	border: none !important;
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+	overflow: hidden;
+	transition: all 0.3s ease;
+	cursor: pointer;
+
+	&:hover {
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+		transform: translateY(-2px);
+	}
+
+	&.active {
+		border: 2px solid #302b63 !important;
+		box-shadow: 0 8px 32px rgba(48, 43, 99, 0.2);
+	}
+
+	.ant-card-body {
+		padding: 20px !important;
+
+		@media (max-width: @screen-sm) {
+			padding: 14px !important;
+		}
+	}
+
+	.itin-card-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 12px;
+
+		.itin-name {
+			font-size: 18px;
+			font-weight: 700;
+			color: #1a1a2e;
+		}
+	}
+
+	.itin-card-meta {
+		display: flex;
+		gap: 16px;
+		flex-wrap: wrap;
+		margin-bottom: 8px;
+
+		.meta-item {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			color: #666;
+			font-size: 14px;
+
+			.anticon {
+				color: #302b63;
+			}
+		}
+	}
+
+	.itin-status {
+		&.draft {
+			background: #fff7e6;
+			color: #fa8c16;
+			border-color: #ffd591;
+		}
+
+		&.confirmed {
+			background: #f6ffed;
+			color: #52c41a;
+			border-color: #b7eb8f;
+		}
+
+		&.completed {
+			background: #e6f7ff;
+			color: #1890ff;
+			border-color: #91d5ff;
+		}
+	}
+}
+
+// ============ Itinerary Editor ============
+.itin-editor {
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+	overflow: hidden;
+
+	.editor-header {
+		padding: 20px 24px;
+		background: linear-gradient(135deg, #302b63, #24243e);
+		color: #fff;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 12px;
+
+		@media (max-width: @screen-sm) {
+			padding: 14px 16px;
+		}
+
+		h3 {
+			color: #fff;
+			margin: 0;
+			font-size: 20px;
+			font-weight: 700;
+		}
+
+		.editor-budget-total {
+			font-size: 22px;
+			font-weight: 800;
+			color: #F7DC6F;
+		}
+	}
+
+	.editor-body {
+		padding: 24px;
+
+		@media (max-width: @screen-sm) {
+			padding: 14px;
+		}
+	}
+}
+
+// ============ Day Section ============
+.day-section {
+	margin-bottom: 24px;
+	border: 1px solid #f0f0f0;
+	border-radius: 16px;
+	overflow: hidden;
+
+	.day-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 14px 20px;
+		background: linear-gradient(135deg, #f8f9ff 0%, #f0f5ff 100%);
+		border-bottom: 1px solid #f0f0f0;
+
+		@media (max-width: @screen-sm) {
+			padding: 10px 14px;
+			flex-wrap: wrap;
+			gap: 8px;
+		}
+
+		.day-title {
+			font-size: 16px;
+			font-weight: 700;
+			color: #302b63;
+		}
+
+		.day-date {
+			color: #666;
+			font-size: 13px;
+		}
+	}
+
+	.day-items {
+		padding: 12px;
+		min-height: 80px;
+
+		@media (max-width: @screen-sm) {
+			padding: 8px;
+		}
+	}
+}
+
+// ============ Day Item ============
+.day-item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 16px;
+	margin-bottom: 8px;
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	border-radius: 12px;
+	transition: all 0.2s ease;
+	cursor: grab;
+
+	@media (max-width: @screen-sm) {
+		padding: 10px 12px;
+		gap: 8px;
+	}
+
+	&:hover {
+		background: #f8f9ff;
+		border-color: #d6d0f0;
+	}
+
+	&:active {
+		cursor: grabbing;
+	}
+
+	.drag-handle {
+		color: #bbb;
+		cursor: grab;
+		font-size: 16px;
+	}
+
+	.item-image {
+		width: 50px;
+		height: 50px;
+		border-radius: 10px;
+		object-fit: cover;
+		flex-shrink: 0;
+
+		@media (max-width: @screen-sm) {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	.item-info {
+		flex: 1;
+		min-width: 0;
+
+		.item-name {
+			font-weight: 600;
+			color: #1a1a2e;
+			font-size: 14px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.item-time {
+			color: #999;
+			font-size: 12px;
+		}
+	}
+
+	.item-cost {
+		font-weight: 700;
+		color: #302b63;
+		font-size: 14px;
+		white-space: nowrap;
+	}
+}
+
+// ============ Add Destination Selector ============
+.dest-selector {
+	.dest-select-item {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding: 8px 0;
+
+		img {
+			width: 40px;
+			height: 40px;
+			border-radius: 8px;
+			object-fit: cover;
+		}
+
+		.dest-select-info {
+			.dest-select-name {
+				font-weight: 600;
+				color: #333;
+			}
+
+			.dest-select-loc {
+				font-size: 12px;
+				color: #999;
+			}
+		}
+	}
+}
+
+// ============ Budget Summary in Editor ============
+.budget-summary-inline {
+	margin-top: 20px;
+	padding: 16px 20px;
+	background: linear-gradient(135deg, #f8f9ff 0%, #f0f5ff 100%);
+	border-radius: 12px;
+
+	.budget-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 6px 0;
+
+		&.total {
+			border-top: 2px solid #302b63;
+			margin-top: 8px;
+			padding-top: 12px;
+			font-weight: 700;
+			font-size: 16px;
+			color: #302b63;
+		}
+	}
+}
+
+// ============ Travel Time Info ============
+.travel-info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 8px 0;
+	color: #999;
+	font-size: 13px;
+
+	.travel-line {
+		width: 40px;
+		height: 1px;
+		background: #ddd;
+		position: relative;
+
+		&::before {
+			content: '→';
+			position: absolute;
+			top: -10px;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #bbb;
+		}
+	}
+}
+
+// ============ Empty Day ============
+.empty-day {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 24px;
+	color: #bbb;
+	font-size: 14px;
+	border: 2px dashed #e8e8e8;
+	border-radius: 12px;
+	margin: 8px;
+
+	.anticon {
+		font-size: 24px;
+		margin-bottom: 8px;
+	}
+}

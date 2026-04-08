@@ -1,0 +1,365 @@
+@import '~antd/es/style/themes/default.less';
+
+.quanTri-container {
+	.quanTri-header {
+		margin-bottom: 24px;
+
+		h2 {
+			font-size: 28px;
+			font-weight: 800;
+			color: #1a1a2e;
+			margin: 0;
+
+			@media (max-width: @screen-sm) {
+				font-size: 22px;
+			}
+		}
+
+		p {
+			color: #666;
+			margin-top: 4px;
+		}
+	}
+}
+
+// ============ Admin Stats ============
+.admin-stats-row {
+	margin-bottom: 24px;
+}
+
+.admin-stat-card {
+	border-radius: 16px !important;
+	border: none !important;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	transition: all 0.3s ease;
+
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+	}
+
+	.ant-card-body {
+		padding: 20px !important;
+		display: flex;
+		align-items: center;
+		gap: 16px;
+
+		@media (max-width: @screen-sm) {
+			padding: 14px !important;
+			gap: 12px;
+		}
+	}
+
+	.stat-icon-box {
+		width: 56px;
+		height: 56px;
+		border-radius: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 24px;
+		flex-shrink: 0;
+
+		@media (max-width: @screen-sm) {
+			width: 44px;
+			height: 44px;
+			border-radius: 12px;
+			font-size: 20px;
+		}
+
+		&.purple {
+			background: linear-gradient(135deg, #f0edff, #e8e4ff);
+			color: #302b63;
+		}
+
+		&.blue {
+			background: linear-gradient(135deg, #e6f7ff, #bae7ff);
+			color: #1890ff;
+		}
+
+		&.green {
+			background: linear-gradient(135deg, #f6ffed, #d9f7be);
+			color: #52c41a;
+		}
+
+		&.orange {
+			background: linear-gradient(135deg, #fff7e6, #ffe7ba);
+			color: #fa8c16;
+		}
+	}
+
+	.stat-content {
+		flex: 1;
+
+		.stat-label {
+			color: #999;
+			font-size: 13px;
+		}
+
+		.stat-value {
+			font-size: 24px;
+			font-weight: 800;
+			color: #1a1a2e;
+			line-height: 1.2;
+
+			@media (max-width: @screen-sm) {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+// ============ Admin Tabs ============
+.admin-tabs {
+	.ant-tabs-nav {
+		margin-bottom: 0;
+	}
+
+	.ant-tabs-tab {
+		font-weight: 600;
+		font-size: 15px;
+		padding: 12px 20px;
+	}
+}
+
+// ============ Destination Management Table ============
+.admin-table-card {
+	border-radius: 16px !important;
+	border: none !important;
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+
+	.ant-card-head {
+		border-bottom: none;
+		padding: 16px 24px;
+
+		.ant-card-head-title {
+			font-weight: 700;
+			color: #1a1a2e;
+		}
+	}
+
+	.ant-card-body {
+		padding: 0 24px 24px !important;
+
+		@media (max-width: @screen-sm) {
+			padding: 0 12px 12px !important;
+		}
+	}
+
+	.table-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 16px;
+		flex-wrap: wrap;
+		gap: 12px;
+
+		.table-search {
+			max-width: 300px;
+			
+			@media (max-width: @screen-sm) {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	.dest-table-image {
+		width: 60px;
+		height: 45px;
+		border-radius: 8px;
+		object-fit: cover;
+	}
+}
+
+// ============ Statistics Cards ============
+.stats-chart-card {
+	border-radius: 16px !important;
+	border: none !important;
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+	margin-bottom: 24px;
+
+	.ant-card-head {
+		border-bottom: none;
+
+		.ant-card-head-title {
+			font-weight: 700;
+			color: #1a1a2e;
+			font-size: 16px;
+		}
+	}
+
+	.ant-card-body {
+		padding: 12px 24px 24px !important;
+
+		@media (max-width: @screen-sm) {
+			padding: 12px 16px 16px !important;
+		}
+	}
+}
+
+// ============ Popular Destinations List ============
+.popular-list {
+	.popular-item {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding: 12px;
+		border-radius: 12px;
+		margin-bottom: 8px;
+		transition: background 0.2s;
+
+		&:hover {
+			background: #f8f9ff;
+		}
+
+		.popular-rank {
+			width: 32px;
+			height: 32px;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 800;
+			font-size: 14px;
+			flex-shrink: 0;
+
+			&.rank-1 {
+				background: linear-gradient(135deg, #f5a623, #f7dc6f);
+				color: #fff;
+			}
+
+			&.rank-2 {
+				background: linear-gradient(135deg, #bbb, #ddd);
+				color: #fff;
+			}
+
+			&.rank-3 {
+				background: linear-gradient(135deg, #cd7f32, #daa520);
+				color: #fff;
+			}
+
+			&.rank-other {
+				background: #f0f0f0;
+				color: #999;
+			}
+		}
+
+		.popular-image {
+			width: 48px;
+			height: 48px;
+			border-radius: 12px;
+			object-fit: cover;
+			flex-shrink: 0;
+		}
+
+		.popular-info {
+			flex: 1;
+
+			.popular-name {
+				font-weight: 600;
+				color: #1a1a2e;
+			}
+
+			.popular-location {
+				font-size: 13px;
+				color: #999;
+			}
+		}
+
+		.popular-count {
+			font-weight: 700;
+			color: #302b63;
+			font-size: 16px;
+
+			span {
+				font-size: 12px;
+				color: #999;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+// ============ Revenue Cards ============
+.revenue-breakdown {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 8px 0;
+
+	.revenue-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 12px 16px;
+		border-radius: 12px;
+		background: #f8f9fa;
+		transition: all 0.2s;
+
+		&:hover {
+			background: #f0f5ff;
+			transform: translateX(4px);
+		}
+
+		.revenue-label {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-weight: 500;
+
+			.revenue-dot {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+			}
+		}
+
+		.revenue-value {
+			font-weight: 700;
+			color: #302b63;
+		}
+	}
+}
+
+// ============ Destination Form Modal ============
+.dest-form-modal {
+	.ant-modal-content {
+		border-radius: 16px;
+	}
+
+	.image-preview {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		border-radius: 12px;
+		margin-bottom: 16px;
+		border: 2px dashed #d9d9d9;
+	}
+
+	.image-placeholder {
+		width: 100%;
+		height: 200px;
+		border-radius: 12px;
+		border: 2px dashed #d9d9d9;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: #bbb;
+		cursor: pointer;
+		transition: all 0.2s;
+		margin-bottom: 16px;
+
+		&:hover {
+			border-color: #302b63;
+			color: #302b63;
+		}
+
+		.anticon {
+			font-size: 32px;
+			margin-bottom: 8px;
+		}
+	}
+}

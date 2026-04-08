@@ -1,0 +1,372 @@
+@import '~antd/es/style/themes/default.less';
+
+.nganSach-container {
+	.nganSach-header {
+		margin-bottom: 24px;
+
+		h2 {
+			font-size: 28px;
+			font-weight: 800;
+			color: #1a1a2e;
+			margin: 0;
+
+			@media (max-width: @screen-sm) {
+				font-size: 22px;
+			}
+		}
+
+		p {
+			color: #666;
+			margin-top: 4px;
+		}
+	}
+}
+
+// ============ Overview Cards ============
+.budget-overview-cards {
+	margin-bottom: 24px;
+}
+
+.budget-stat-card {
+	border-radius: 16px !important;
+	border: none !important;
+	overflow: hidden;
+	transition: all 0.3s ease;
+
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+	}
+
+	.ant-card-body {
+		padding: 24px !important;
+		position: relative;
+		overflow: hidden;
+
+		@media (max-width: @screen-sm) {
+			padding: 16px !important;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -30%;
+			right: -20%;
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			background: rgba(255, 255, 255, 0.12);
+		}
+	}
+
+	&.card-primary .ant-card-body {
+		background: linear-gradient(135deg, #302b63, #24243e);
+	}
+
+	&.card-success .ant-card-body {
+		background: linear-gradient(135deg, #4ECDC4, #44AF69);
+	}
+
+	&.card-warning .ant-card-body {
+		background: linear-gradient(135deg, #f5a623, #f78c1c);
+	}
+
+	&.card-danger .ant-card-body {
+		background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+	}
+
+	.stat-icon {
+		font-size: 28px;
+		margin-bottom: 12px;
+	}
+
+	.stat-label {
+		color: rgba(255, 255, 255, 0.85);
+		font-size: 14px;
+		margin-bottom: 4px;
+	}
+
+	.stat-value {
+		color: #fff;
+		font-size: 24px;
+		font-weight: 800;
+		line-height: 1.2;
+
+		@media (max-width: @screen-sm) {
+			font-size: 18px;
+		}
+	}
+
+	.stat-sub {
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 13px;
+		margin-top: 4px;
+	}
+}
+
+// ============ Chart Section ============
+.budget-chart-section {
+	margin-bottom: 24px;
+
+	.chart-card {
+		border-radius: 16px !important;
+		border: none !important;
+		box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+		overflow: hidden;
+
+		.ant-card-head {
+			border-bottom: none;
+
+			.ant-card-head-title {
+				font-weight: 700;
+				color: #1a1a2e;
+				font-size: 16px;
+			}
+		}
+
+		.ant-card-body {
+			padding: 12px 24px 24px !important;
+
+			@media (max-width: @screen-sm) {
+				padding: 12px 16px 16px !important;
+			}
+		}
+	}
+}
+
+// ============ Budget Donut ============
+.budget-donut {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+	flex-wrap: wrap;
+	padding: 20px 0;
+
+	@media (max-width: @screen-sm) {
+		gap: 24px;
+	}
+
+	.donut-chart {
+		position: relative;
+		width: 200px;
+		height: 200px;
+
+		@media (max-width: @screen-sm) {
+			width: 160px;
+			height: 160px;
+		}
+
+		.donut-center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+
+			.donut-total-label {
+				color: #999;
+				font-size: 12px;
+			}
+
+			.donut-total-value {
+				font-size: 18px;
+				font-weight: 800;
+				color: #302b63;
+
+				@media (max-width: @screen-sm) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	.donut-legend {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		.legend-item {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+
+			.legend-dot {
+				width: 12px;
+				height: 12px;
+				border-radius: 4px;
+				flex-shrink: 0;
+			}
+
+			.legend-label {
+				color: #666;
+				min-width: 80px;
+			}
+
+			.legend-value {
+				font-weight: 700;
+				color: #1a1a2e;
+			}
+
+			.legend-percent {
+				color: #999;
+				font-size: 13px;
+				min-width: 45px;
+			}
+		}
+	}
+}
+
+// ============ Budget Bars ============
+.budget-bars {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 16px 0;
+
+	.bar-item {
+		.bar-header {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 6px;
+
+			.bar-label {
+				font-weight: 600;
+				color: #333;
+			}
+
+			.bar-value {
+				font-weight: 700;
+				color: #302b63;
+			}
+		}
+
+		.bar-track {
+			height: 12px;
+			background: #f0f0f0;
+			border-radius: 6px;
+			overflow: hidden;
+
+			.bar-fill {
+				height: 100%;
+				border-radius: 6px;
+				transition: width 0.6s ease;
+				position: relative;
+
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					height: 50%;
+					background: rgba(255, 255, 255, 0.3);
+					border-radius: 6px 6px 0 0;
+				}
+			}
+		}
+	}
+}
+
+// ============ Budget Table ============
+.budget-table-card {
+	border-radius: 16px !important;
+	border: none !important;
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+
+	.ant-card-head {
+		border-bottom: none;
+
+		.ant-card-head-title {
+			font-weight: 700;
+			color: #1a1a2e;
+		}
+	}
+
+	.ant-table {
+		.ant-table-thead > tr > th {
+			background: #f8f9ff;
+			font-weight: 700;
+			color: #302b63;
+		}
+	}
+}
+
+// ============ Budget Alert ============
+.budget-alert-card {
+	border-radius: 16px !important;
+	border: none !important;
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+	margin-bottom: 24px;
+
+	.alert-item {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding: 12px 16px;
+		border-radius: 12px;
+		margin-bottom: 8px;
+		transition: background 0.2s;
+
+		&:hover {
+			background: #f8f9ff;
+		}
+
+		&.warning {
+			background: #fff7e6;
+		}
+
+		&.danger {
+			background: #fff1f0;
+		}
+
+		&.success {
+			background: #f6ffed;
+		}
+
+		.alert-icon {
+			font-size: 24px;
+		}
+
+		.alert-content {
+			flex: 1;
+
+			.alert-title {
+				font-weight: 600;
+				color: #333;
+			}
+
+			.alert-desc {
+				color: #999;
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+// ============ Itinerary Selector ============
+.itin-select-bar {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	flex-wrap: wrap;
+	margin-bottom: 24px;
+	padding: 16px 20px;
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+
+	.select-label {
+		font-weight: 600;
+		color: #333;
+		white-space: nowrap;
+	}
+
+	.ant-select {
+		min-width: 280px;
+
+		@media (max-width: @screen-sm) {
+			min-width: 100%;
+		}
+	}
+}

@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -17,12 +17,40 @@
 	},
 
 	///////////////////////////////////
+	// TRAVEL PLANNER MENU
+	{
+		path: '/kham-pha',
+		name: 'KhamPha',
+		component: './KhamPha',
+		icon: 'CompassOutlined',
+	},
+	{
+		path: '/lich-trinh',
+		name: 'LichTrinh',
+		component: './LichTrinh',
+		icon: 'ScheduleOutlined',
+	},
+	{
+		path: '/ngan-sach',
+		name: 'NganSach',
+		component: './NganSach',
+		icon: 'FundOutlined',
+	},
+	{
+		path: '/quan-tri',
+		name: 'QuanTri',
+		component: './QuanTri',
+		icon: 'SettingOutlined',
+	},
+
+	///////////////////////////////////
 	// DEFAULT MENU
 	{
 		path: '/dashboard',
 		name: 'Dashboard',
 		component: './TrangChu',
 		icon: 'HomeOutlined',
+		hideInMenu: true,
 	},
 	{
 		path: '/gioi-thieu',
@@ -35,27 +63,15 @@
 		name: 'RandomUser',
 		component: './RandomUser',
 		icon: 'ArrowsAltOutlined',
+		hideInMenu: true,
 	},
 	{
 		path: '/todo-list',
 		name: 'TodoList',
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
+		hideInMenu: true,
 	},
-
-	// DANH MUC HE THONG
-	// {
-	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
-	// 	icon: 'copy',
-	// 	routes: [
-	// 		{
-	// 			name: 'ChucVu',
-	// 			path: 'chuc-vu',
-	// 			component: './DanhMuc/ChucVu',
-	// 		},
-	// 	],
-	// },
 
 	{
 		path: '/notification',
@@ -81,6 +97,7 @@
 	},
 	{
 		path: '/',
+		redirect: '/kham-pha',
 	},
 	{
 		path: '/403',

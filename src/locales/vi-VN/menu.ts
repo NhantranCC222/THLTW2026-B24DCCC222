@@ -8,4 +8,10 @@ export default {
 
 	'menu.DanhMuc': 'Danh mục',
 	'menu.DanhMuc.ChucVu': 'Chức vụ',
+
+	// Travel Planner
+	'menu.KhamPha': 'Khám phá',
+	'menu.LichTrinh': 'Lịch trình',
+	'menu.NganSach': 'Ngân sách',
+	'menu.QuanTri': 'Quản trị',
 };
