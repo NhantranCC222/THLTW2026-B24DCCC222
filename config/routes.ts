@@ -42,6 +42,12 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+  path: '/midterm/order',
+  name: 'Quản lý đơn hàng',
+  icon: 'BookOutlined',
+  component: './Midterm/Order',
+},
 
 	// DANH MUC HE THONG
 	// {
