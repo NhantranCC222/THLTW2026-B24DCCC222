@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -43,11 +43,41 @@
 		component: './TodoList',
 	},
 	{
-  path: '/midterm/order',
-  name: 'Quản lý đơn hàng',
-  icon: 'BookOutlined',
-  component: './Midterm/Order',
-},
+		path: '/th07',
+		name: 'TH07',
+		icon: 'FolderOutlined',
+		routes: [
+			{
+				path: '/th07/home',
+				name: 'Trang chủ Blog',
+				component: './TH07/Home',
+			},
+			{
+				path: '/th07/post/:id',
+				component: './TH07/PostDetail',
+				hideInMenu: true,
+			},
+			{
+				path: '/th07/about',
+				name: 'Giới thiệu',
+				component: './TH07/About',
+			},
+			{
+				path: '/th07/manage-posts',
+				name: 'Quản lý bài viết',
+				component: './TH07/ManagePosts',
+			},
+			{
+				path: '/th07/manage-tags',
+				name: 'Quản lý thẻ',
+				component: './TH07/ManageTags',
+			},
+			{
+				path: '/th07',
+				redirect: '/th07/home',
+			},
+		]
+	},
 
 	// DANH MUC HE THONG
 	// {
