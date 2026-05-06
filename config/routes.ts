@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -12,6 +12,31 @@
 			{
 				path: '/user',
 				redirect: '/user/login',
+			},
+		],
+	},
+	{
+		path: '/th09',
+		name: 'TH09',
+		icon: 'ProjectOutlined',
+		routes: [
+			{
+				path: '/th09/dashboard',
+				name: 'Dashboard',
+				icon: 'DashboardOutlined',
+				component: './TH09/Dashboard',
+			},
+			{
+				path: '/th09/kanban',
+				name: 'Kanban Board',
+				icon: 'AppstoreOutlined',
+				component: './TH09/KanbanBoard',
+			},
+			{
+				path: '/th09/tasks',
+				name: 'Danh sách Task',
+				icon: 'UnorderedListOutlined',
+				component: './TH09/TaskList',
 			},
 		],
 	},
